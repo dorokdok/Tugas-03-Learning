@@ -41,8 +41,8 @@ def pick_Class(data, Train, k):
     for i in range(len(data)):
         x = data[i]
         dmpList = [x for _, x in sorted(zip(x,dataTrain))]
-        kelas = max(set(dmpList[0:k]), key = dmpList.count)
-        Class.append(kelas)    
+        kelas = max(set(dmpList[0:k]), key = dmpList[0:k].count)
+        Class.append(kelas)
     return Class
 
 #Evaluasi Model
@@ -107,6 +107,7 @@ if __name__ == '__main__':
     print("Tugas=03-Learning")
     print("===================")
     main()
+    print("\nProgram telah selesai mengeluankan output dengan nama file output.xlsx")
     print("===================")
     print("Program Selesai")
 
